@@ -1,0 +1,13 @@
+name: PaperAttributeSwapFix
+version: '1.1.0'
+main: com.salmonblock.pasf.PASF
+api-version: '1.21'
+description: "Paper Attribute Swap Fix - Restores vanilla attribute swapping on Paper (1.21.1 - 1.21.11 backport)"
+commands:
+  pasf:
+    description: Toggle vanilla attribute swap on/off
+    permission: pasf.toggle
+permissions:
+  pasf.toggle:
+    description: Allows toggling the attribute swap fix
+    default: op
