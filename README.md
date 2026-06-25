@@ -18,10 +18,10 @@ Paper blocks this by default. PASF flips the switch with one command and patches
 
 Two builds are published per release — pick the one matching your server:
 
-| Build | Server versions | Jar |
-|-------|-----------------|-----|
-| Current (repo root) | Paper 26.1.x | `pasf-1.1.0.jar` |
-| Backport ([`backport-1.21/`](backport-1.21)) | Paper 1.21.1 – 1.21.11 | `pasf-1.1.0-paper1.21.jar` |
+| Folder | Server versions | Jar |
+|--------|-----------------|-----|
+| [`paper-26.1/`](paper-26.1) | Paper 26.1.x | `pasf-1.1.0.jar` |
+| [`paper-1.21/`](paper-1.21) | Paper 1.21.1 – 1.21.11 | `pasf-1.1.0-paper1.21.jar` |
 
 The code is identical; the builds differ only in the targeted Paper API.
 
@@ -51,11 +51,11 @@ enabled: true
 Requires Java 21 and Maven.
 
 ```sh
-# Current build (Paper 26.1.x)
-mvn clean package                       # -> target/pasf-1.1.0.jar
+# Paper 26.1.x build
+mvn -f paper-26.1/pom.xml clean package      # -> paper-26.1/target/pasf-1.1.0.jar
 
-# Backport build (Paper 1.21.1 - 1.21.11)
-mvn -f backport-1.21/pom.xml clean package   # -> backport-1.21/target/pasf-1.1.0-paper1.21.jar
+# Paper 1.21.1 - 1.21.11 build
+mvn -f paper-1.21/pom.xml clean package      # -> paper-1.21/target/pasf-1.1.0-paper1.21.jar
 ```
 
 ## License
