@@ -1,0 +1,5 @@
+# PASF - Paper Attribute Swap Fix
+# Restores vanilla attribute swapping behavior on Paper servers
+
+# Whether vanilla attribute swap behavior is enabled
+enabled: true

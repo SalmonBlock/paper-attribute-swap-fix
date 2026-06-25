@@ -1,6 +1,6 @@
 # PASF — Paper Attribute Swap Fix
 
-A Paper 1.21.1 - 26.1.2 plugin to easily toggle attribute swapping on Paper servers, with fixes to make it as close to vanilla as possible.
+A Paper 1.21.1 - 26.2 plugin to easily toggle attribute swapping on Paper servers, with fixes to make it as close to vanilla as possible.
 
 ## What is Attribute Swapping?
 
@@ -16,10 +16,11 @@ Paper blocks this by default. PASF flips the switch with one command and patches
 
 ## Versions
 
-Two builds are published per release — pick the one matching your server:
+Pick the build matching your server:
 
 | Folder | Server versions | Jar |
 |--------|-----------------|-----|
+| [`paper-26.2/`](paper-26.2) | Paper 26.2.x | `pasf-1.1.0-paper26.2.jar` |
 | [`paper-26.1/`](paper-26.1) | Paper 26.1.x | `pasf-1.1.0.jar` |
 | [`paper-1.21/`](paper-1.21) | Paper 1.21.1 – 1.21.11 | `pasf-1.1.0-paper1.21.jar` |
 
@@ -48,13 +49,16 @@ enabled: true
 
 ## Building
 
-Requires Java 21 and Maven.
+Requires Maven. The `paper-26.2` build needs **JDK 25**; the `paper-26.1` and `paper-1.21` builds need **JDK 21**.
 
 ```sh
-# Paper 26.1.x build
+# Paper 26.2.x build (JDK 25)
+mvn -f paper-26.2/pom.xml clean package      # -> paper-26.2/target/pasf-1.1.0-paper26.2.jar
+
+# Paper 26.1.x build (JDK 21)
 mvn -f paper-26.1/pom.xml clean package      # -> paper-26.1/target/pasf-1.1.0.jar
 
-# Paper 1.21.1 - 1.21.11 build
+# Paper 1.21.1 - 1.21.11 build (JDK 21)
 mvn -f paper-1.21/pom.xml clean package      # -> paper-1.21/target/pasf-1.1.0-paper1.21.jar
 ```
 
