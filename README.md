@@ -21,7 +21,7 @@ Pick the build matching your server:
 | Folder | Server versions | Jar |
 |--------|-----------------|-----|
 | [`paper-26.2/`](paper-26.2) | Paper 26.2.x | `pasf-1.1.0-paper26.2.jar` |
-| [`paper-26.1/`](paper-26.1) | Paper 26.1.x | `pasf-1.1.0.jar` |
+| [`paper-26.1/`](paper-26.1) | Paper 26.1.x | `pasf-1.1.0-paper26.1.jar` |
 | [`paper-1.21/`](paper-1.21) | Paper 1.21.1 – 1.21.11 | `pasf-1.1.0-paper1.21.jar` |
 
 The code is identical; the builds differ only in the targeted Paper API.
@@ -56,7 +56,7 @@ Requires Maven. The `paper-26.2` build needs **JDK 25**; the `paper-26.1` and `p
 mvn -f paper-26.2/pom.xml clean package      # -> paper-26.2/target/pasf-1.1.0-paper26.2.jar
 
 # Paper 26.1.x build (JDK 21)
-mvn -f paper-26.1/pom.xml clean package      # -> paper-26.1/target/pasf-1.1.0.jar
+mvn -f paper-26.1/pom.xml clean package      # -> paper-26.1/target/pasf-1.1.0-paper26.1.jar
 
 # Paper 1.21.1 - 1.21.11 build (JDK 21)
 mvn -f paper-1.21/pom.xml clean package      # -> paper-1.21/target/pasf-1.1.0-paper1.21.jar

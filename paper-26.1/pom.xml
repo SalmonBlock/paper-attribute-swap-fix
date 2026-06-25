@@ -34,6 +34,7 @@
     </dependencies>
 
     <build>
+        <finalName>pasf-1.1.0-paper26.1</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
