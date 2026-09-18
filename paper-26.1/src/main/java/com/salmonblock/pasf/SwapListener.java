@@ -27,11 +27,11 @@ public class SwapListener implements Listener {
     private final NamespacedKey dmgKey;
     private final NamespacedKey spdKey;
 
-    // Snapshot of every player's attackStrengthTicker, updated every tick
-    // so we always have the value from BEFORE Paper resets it
+    // Snapshot of every players attackstrengthticker updated every tick
+    // so we always have the value from before aper resets it
     private final Map<UUID, Integer> tickerSnapshots = new ConcurrentHashMap<>();
 
-    // NMS reflection
+    // nms reflection
     private Method getHandleMethod;
     private Field attackTickerField;
     private boolean tickerAvailable = true;
@@ -41,7 +41,7 @@ public class SwapListener implements Listener {
         this.dmgKey = new NamespacedKey(plugin, "pasf-dmg");
         this.spdKey = new NamespacedKey(plugin, "pasf-spd");
 
-        // Snapshot every player's attack ticker every tick
+        // snapshot every players attack ticker every tick
         Bukkit.getScheduler().runTaskTimer(plugin, () -> {
             if (!plugin.isToggled()) return;
             for (Player p : Bukkit.getOnlinePlayers()) {
@@ -53,7 +53,7 @@ public class SwapListener implements Listener {
         }, 1L, 1L);
     }
 
-    // --- Item swap listeners ---
+    // item swap listeners 
 
     @EventHandler(priority = EventPriority.LOWEST)
     public void onHotbarSwap(PlayerItemHeldEvent event) {
